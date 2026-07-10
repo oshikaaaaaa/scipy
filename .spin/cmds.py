@@ -870,7 +870,7 @@ def bench(ctx, tests, submodule, compare, verbose, quick,
     if quick:
         bench_args = ['--quick'] + bench_args
 
-    if dry_run:
+    if dry_run and not compare:
         bench_args = ['--dry-run'] + bench_args
 
     if len(array_api_backend) != 0:
